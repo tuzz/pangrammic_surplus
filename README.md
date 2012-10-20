@@ -44,6 +44,21 @@ And therefore, the following is a true self-enumerating pangram:
 
 "This pangram lists four a's, one b, one c, two d's, twenty-nine e's, eight f's, three g's, five h's, eleven i's, one j, one k, three l's, two m's, twenty-two n's, fifteen o's, two p's, one q, seven r's, twenty-six s's, nineteen t's, four u's, five v's, nine w's, two x's, four y's, and one z."
 
+## Satisfiability
+
+Self-enumerating pangrams can only be constructed from surpluses of positive integers because we can't remove characters from the minimal sentence structures:
+
+A pangram can not be created from on**e** **e**, because two have been used for that term alone. The surplus would infact be -1 before you even consider other terms.
+
+In cases where there are no satisfiable pangrams for a given input, ```PangrammicSurplus.for``` returns nil, unless you pass true in for its second argument:
+
+```ruby
+PangrammicSurplus.for({ 'e' => 1 }, allow_negatives = true)
+#=> { 'e' => -1 }
+```
+
+This may be useful if you're writing an algorithm that checks just how unsatisfiable the given attempt was.
+
 ## Contribution
 
 Feel free to contribute. No commit is too small.

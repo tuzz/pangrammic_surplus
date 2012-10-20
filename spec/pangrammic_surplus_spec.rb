@@ -33,13 +33,22 @@ describe %{
     PangrammicSurplus.for(hash).should == surplus_counts
   end
 
-  it 'returns a hash containing negatives for unsatisfiable pangrams' do
-    hash = ('a'..'z').inject({}) { |h, c| h.merge(c => 3) }
-    surplus = PangrammicSurplus.for(hash)
+  context 'when an optional parameter is specified' do
+    it 'returns a hash containing negatives for unsatisfiable pangrams' do
+      hash = ('a'..'z').inject({}) { |h, c| h.merge(c => 3) }
+      surplus = PangrammicSurplus.for(hash, true)
 
-    surplus['e'].should == 3 - (26 * 2 + 1)
-    surplus['t'].should == 3 - (26 + 1)
-    surplus['z'].should == 3 - 1
+      surplus['e'].should == 3 - (26 * 2 + 1)
+      surplus['t'].should == 3 - (26 + 1)
+      surplus['z'].should == 3 - 1
+    end
+  end
+
+  context 'when an optional parameter is unspecified' do
+    it 'returns nil for unsatisfiable pangrams' do
+      hash = ('a'..'z').inject({}) { |h, c| h.merge(c => 3) }
+      PangrammicSurplus.for(hash).should be_nil
+    end
   end
 
 end
