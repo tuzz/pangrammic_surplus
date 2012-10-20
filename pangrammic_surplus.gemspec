@@ -8,5 +8,6 @@ Gem::Specification.new do |s|
   s.files       = ['README.md'] + Dir['lib/**/*.*']
   s.homepage    = 'https://github.com/cpatuzzo/pangrammic_surplus'
 
+  s.add_dependency 'numbers_and_words'
   s.add_development_dependency 'rspec'
 end
