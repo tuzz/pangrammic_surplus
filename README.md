@@ -53,7 +53,7 @@ A pangram can not be created from on**e** **e**, because two have been used for 
 In cases where there are no satisfiable pangrams for a given input, ```PangrammicSurplus.for``` returns nil, unless you pass true in for its second argument:
 
 ```ruby
-PangrammicSurplus.for({ 'e' => 1 }, allow_negatives = true)
+PangrammicSurplus.for({ 'e' => 1 }, true)
 #=> { 'e' => -1 }
 ```
 
