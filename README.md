@@ -18,10 +18,10 @@ For example:
   require 'pangrammic_surplus'
 
   surplus = PangrammicSurplus.for(
-    'a' => 4, 'b' => 1, 'c' => 1, 'd' => 2, 'e' => 29, 'f' => 8, 'g' => 3,
-    'h' => 5, 'i' => 11, 'j' => 1, 'k' => 1, 'l' => 3, 'm' => 2, 'n' => 22,
-    'o' => 15, 'p' => 2, 'q' => 1, 'r' => 7, 's' => 26, 't' => 19, 'u' => 4,
-    'v' => 5, 'w' => 9, 'x' => 2, 'y' => 4, 'z' => 1
+    'a' => 4,  'b' => 1,  'c' => 1, 'd' => 2, 'e' => 29, 'f' => 8,  'g' => 3,
+    'h' => 5,  'i' => 11, 'j' => 1, 'k' => 1, 'l' => 3,  'm' => 2,  'n' => 22,
+    'o' => 15, 'p' => 2,  'q' => 1, 'r' => 7, 's' => 26, 't' => 19, 'u' => 4,
+    'v' => 5,  'w' => 9,  'x' => 2, 'y' => 4, 'z' => 1
   )
 
   puts surplus.inspect
@@ -43,3 +43,9 @@ If we can construct boilerplate from an anagram of these letters, we have a true
 And therefore, the following is a true self-enumerating pangram:
 
 "This pangram lists four a's, one b, one c, two d's, twenty-nine e's, eight f's, three g's, five h's, eleven i's, one j, one k, three l's, two m's, twenty-two n's, fifteen o's, two p's, one q, seven r's, twenty-six s's, nineteen t's, four u's, five v's, nine w's, two x's, four y's, and one z."
+
+## Contribution
+
+Feel free to contribute. No commit is too small.
+
+You should follow me: [@cpatuzzo](https://twitter.com/cpatuzzo)
