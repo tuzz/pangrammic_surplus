@@ -58,9 +58,3 @@ PangrammicSurplus.for({ 'e' => 1 }, allow_negatives = true)
 ```
 
 This may be useful if you're writing an algorithm that checks just how unsatisfiable the given attempt was.
-
-## Contribution
-
-Feel free to contribute. No commit is too small.
-
-You should follow me: [@cpatuzzo](https://twitter.com/cpatuzzo)
